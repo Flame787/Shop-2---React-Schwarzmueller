@@ -22,7 +22,10 @@ import { CartContext } from "../store/shopping-cart-context";
   // const totalPrice = cartCtx.items.reduce(
 
   const totalPrice = items.reduce(
-    // this works if we have desctructured the cartCtx-object
+    // reduce()-function is a native JS-function, used on every item in array, 
+    // Here it multiplies item-price with item-quantity, adds it to previous value, starting value is 0. 
+    // Reducer-function is reducing an array of numbers to a single number. 
+
     (acc, item) => acc + item.price * item.quantity,
     0
   );
